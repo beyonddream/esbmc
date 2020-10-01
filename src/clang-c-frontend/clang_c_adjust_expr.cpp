@@ -504,6 +504,7 @@ void clang_c_adjust::adjust_side_effect_assignment(exprt &expr)
   exprt &op1 = expr.op1();
 
   const typet type0 = op0.type();
+  expr.type() = type0;
 
   if(statement == "assign")
   {
@@ -518,15 +519,14 @@ void clang_c_adjust::adjust_side_effect_assignment(exprt &expr)
     if(is_number(op1.type()))
     {
       if(statement == "assign_shl")
-      {
         return;
-      }
 
       if(type0.id() == "unsignedbv")
       {
         expr.statement("assign_lshr");
         return;
       }
+
       if(type0.id() == "signedbv")
       {
         expr.statement("assign_ashr");
@@ -534,11 +534,8 @@ void clang_c_adjust::adjust_side_effect_assignment(exprt &expr)
       }
     }
   }
-  else if(type0.is_bool())
-  {
-    gen_typecast_arithmetic(ns, op1);
-    return;
-  }
+
+  gen_typecast_arithmetic(ns, op0, op1);
 }
 
 void clang_c_adjust::adjust_side_effect_function_call(
