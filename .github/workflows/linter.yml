@@ -31,8 +31,8 @@ jobs:
     steps:
     - name: Make git use LF only
       run: |
-        git config --system core.autocrlf false
-        git config --system core.eol lf          
+        git config core.autocrlf false
+        git config core.eol lf          
     - uses: actions/checkout@v1    
     - name: Download Clang 9
       run: wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
