@@ -51,7 +51,9 @@ typedef __quad_t *__qaddr_t;
 typedef char *__caddr_t;
 typedef long int __intptr_t;
 typedef unsigned int __socklen_t;
+#ifndef _WIN32
 typedef long unsigned int size_t;
+#endif
 
 typedef __time_t time_t;
 

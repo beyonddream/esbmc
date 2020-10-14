@@ -109,7 +109,9 @@ struct _GUID {
    unsigned char Data4[8] ;
 };
 typedef struct _GUID GUID;
+#ifndef _WIN32
 typedef unsigned int size_t;
+#endif
 typedef UCHAR KIRQL;
 struct _KTHREAD;
 typedef struct _KTHREAD *PKTHREAD;

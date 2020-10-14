@@ -1,4 +1,6 @@
+#ifndef _WIN32
 typedef long unsigned int size_t;
+#endif
 extern int printf (const char* format, ...);
 extern void* alloca(size_t size);
 

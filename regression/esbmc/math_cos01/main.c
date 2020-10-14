@@ -1,8 +1,8 @@
-#include <math.h>
-#include <stdio.h>
-#include <assert.h>
+//#include <math.h>
+//#include <stdio.h>
+//#include <assert.h>
 
-#define M_PI     3.14159265358979323846
+//#define M_PI     3.14159265358979323846
 int main() {
   printf("%.16f \n", cos(45));
   assert(fabs(cos(45) - 0.5253219888177297) <= 1e-8 );

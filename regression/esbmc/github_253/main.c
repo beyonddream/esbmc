@@ -28,7 +28,9 @@ struct Od_IndexTable{
 struct Od_Index* Id_MCDC_0;
 struct Od_IndexTable* Id_MCDC_1;
 } ;
+#ifndef _WIN32
 typedef unsigned int  size_t;
+#endif
 struct _IO_FILE{
 int  Id_MCDC_2;
 char * Id_MCDC_3;

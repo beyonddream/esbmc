@@ -368,7 +368,9 @@ extern int ppoll (struct pollfd *__fds, nfds_t __nfds,
 
 # 1 "/usr/lib/gcc/x86_64-redhat-linux/4.5.1/include/stddef.h" 1 3 4
 # 211 "/usr/lib/gcc/x86_64-redhat-linux/4.5.1/include/stddef.h" 3 4
+#ifndef _WIN32
 typedef long unsigned int size_t;
+#endif
 # 35 "/usr/include/stdio.h" 2 3 4
 # 45 "/usr/include/stdio.h" 3 4
 struct _IO_FILE;

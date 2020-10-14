@@ -4,8 +4,9 @@
 
 
 
-
+#ifndef _WIN32
 typedef long unsigned int size_t;
+#endif
 typedef int wchar_t;
 
 

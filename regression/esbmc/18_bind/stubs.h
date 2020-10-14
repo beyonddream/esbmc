@@ -11,7 +11,9 @@
 /* I had size_t being an unsigned long before, but that led to the
  * infamous "Equality without matching types" error when I used a
  * size_t to index into an array. */
+#ifndef _WIN32
 typedef int size_t;
+#endif
 typedef int bool;
 #define true 1
 #define false 0

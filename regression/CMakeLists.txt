@@ -14,11 +14,11 @@ function(add_esbmc_regression folder mode)
 endfunction(add_esbmc_regression mode folder)
 
 if(APPLE)
-    set(REGRESSIONS esbmc cstd llvm floats floats-regression k-induction esbmc-unix)
+    set(REGRESSIONS esbmc cstd llvm floats floats-regression k-induction esbmc-unix nonz3)
 elseif(WIN32)
     set(REGRESSIONS esbmc cstd llvm floats floats-regression k-induction)
 else()
-    set(REGRESSIONS esbmc cstd llvm floats floats-regression k-induction esbmc-cpp/cpp csmith esbmc-unix)
+    set(REGRESSIONS esbmc cstd llvm floats floats-regression k-induction esbmc-cpp/cpp csmith esbmc-unix nonz3)
 endif()
 
 foreach(regression IN LISTS REGRESSIONS)

@@ -2,7 +2,9 @@
 /* print_CIL_Input is true */
 
 #pragma pack(push,8)
+#ifndef _WIN32
 typedef unsigned int size_t;
+#endif
 typedef unsigned short wchar_t;
 #pragma pack(pop)
 #pragma pack(push,8)
